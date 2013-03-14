@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* CAR BOOT SIZE DIAGRAM */]
+#check_or_gif{
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+#car_diagram{
+	width: 100%;
+	float: left;
+}
+
+#car_width_wrapper{
+	width: 189px;
+	float: left;	
+}
+
+#car_height_wrapper{
+	width: 180px;
+	margin-right: 9px;
+}
+
+#car_height_wrapper div{
+	width: 138px;
+	float: left;
+}
+
+#car_depth_wrapper{
+	width: 135px;
+	float: left;
+}
+
+#car_wh{margin: 0;}
+
+#c_height{
+	float: right;
+	margin-top: 48px;
+}
+
+#c_depth{
+	position: relative;
+	left: -10px;
+}
+
+#c_width{
+	position: relative;
+	left: 30px;
+}
+
+
+.measurement{
+	color: #717171;
+    font-size: 12px;
+}
+
+.t_center{text-align: center;}
+
+#boot_size{margin-bottom: 20px;}
+
+#your_car #car{margin-top: 60px;}

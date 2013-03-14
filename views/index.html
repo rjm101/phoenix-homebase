@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js">
+<head>    
+	<meta charset="UTF-8">
+    
+	<title>Homebase - UI Concept</title>
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/css_reset.css?v={{build_version}}">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css?v={{build_version}}">
+    <link rel="stylesheet" type="text/css" href="/static/css/modal_box.css?v={{build_version}}">
+    <!--link rel="stylesheet" type="text/css" href="/static/css/boot_size.css?v={{build_version}}"-->
+</head>
+<body>
+	<!--SHOW PRODUCT AND CAR REG OPTIONS -->
+    <div id="product_menu_box" class="default_left_pos">
+    	
+    	<a href="javascript:void(0);" id="slide_arrow"></a>
+    		
+	    <div id="product_select_box">
+	    	<div id="product_title_container"><a href="#">Select A User Scenario</a></div>
+	        <ul id="product_selection">
+	        	<li>
+	            	<a href="javascript:void(0);"><img src="/static/images/products/790393_R_Z001.jpg" alt="product_title" class="product_thumb" data-id="53343"></a>
+	                <a href="javascript:void(0);" class="product_title" data-id="53343">Provence Double Wardrobe</a>
+				</li>
+				<li>
+	            	<a href="javascript:void(0);"><img src="/static/images/products/025497_R_Z001.jpg" alt="product_title" class="product_thumb" data-id="21344"></a>
+	                <a href="javascript:void(0);" class="product_title" data-id="21344">Chester Compact Sofa - Dark Stained Feet - Beige - Fabric</a>
+				</li>
+				<li>
+	            	<a href="javascript:void(0);"><img src="/static/images/products/lamp_table.jpg" alt="product_title" class="product_thumb" data-id="33421"></a>
+	                <a href="javascript:void(0);" class="product_title" data-id="33421">Wiltshire Lamp Table Oak </a>
+				</li>
+	        </ul>
+	        
+	        <div id="car_regs">
+		        <h3>Car Reg Numbers:</h3>
+				<ul id="reg_nos">
+					<li><a href="javascript:void(0);" data-id="YM3VWM1">YM3VWM1</a></li>
+					<li><a href="javascript:void(0);" data-id="B4G23UM">B4G23UM</a></li>
+					<li><a href="javascript:void(0);" data-id="J8TY34M">J8TY34M</a></li>
+				</ul>
+	        </div>
+	    </div>
+    </div>
+
+	<!--OVERLAY PANELS-->
+	<div class="overlay"></div>
+	
+	<!--PANELS-->
+	<div class="panel">
+		<h2>Will it fit in my car?</h2>
+		
+		<!--FILL IN YOUR CAR REGISTRATION-->
+		<div class="content_area" id="car_reg_form">
+		
+			<h3>Enter Car Registration</h3>
+			<form id="my_reg_form">
+				<input type="text" placeholder="My Car Registration" id="car_reg" required>
+				<button type="submit" value="search">Search</button>
+			</form>
+			<hr>
+				
+			<form id="select_make_model">
+				<div id="make_col">
+					<label>Select Make</label><br>
+	                <select id="car_make" name="">
+	                    <option selected="selected">Ford</option>
+	                    <option>Audi</option>
+	                    <option>BMW</option>
+	                    <option>Chrysler</option>
+	                    <option>Citroen</option>
+	                    <option>Dodge</option>
+	                    <option>Honda</option>
+	                    <option>Jaguar</option>
+	                    <option>Kia</option>
+	                    <option>Land Rover</option>
+	                    <option>Lexus</option>
+	                    <option>Morgan</option>
+	                    <option>Nissan</option>
+	                    <option>VW</option>
+	                    <option>Volvo</option>
+	                </select>
+				</div>
+				<div id="model_col">
+					<label>Select Car Model</label><br>
+					<select id="model" name="">
+						<option selected="selected">Ford Fiesta</option>
+					</select>
+				</div>
+            </form>
+		</div>
+		
+		<!--YOUR CAR DIMENSIONS-->
+		<div class="content_area" id="your_car">
+			
+			<div id="selected_product">
+				<img src="/static/images/products/025497_R_Z001.jpg" alt="product name" class="product_item">
+				<h3 id="modal_product_name">Product Item Name</h3>
+				<p id="product_sizes">Package Dimensions:</p>
+				<p id="package_dimensions"></p>
+			</div>
+			
+			<div id="car_product_info">
+				<hr>
+				<div id="car_info">
+					<img src="/static/images/check.gif" alt="check" id="check_or_gif">
+					<h3>My Car: <span id="car_name">My car name</span></h3>
+					<p id="bs_container">
+						<span id="boot_size"></span>
+					</p>
+					<div id="button_container">
+						<a href="http://www.homebase.co.uk" id="click_and_collect" class="panel_btn">Click and collect</a>
+						<a href="javascript:void(0);" id="new_reg" data-id="" class="panel_btn">Enter new registration</a>
+						<a href="http://www.homebase.co.uk" id="add_to_trolley" data-id="" class="panel_btn">Add to trolley</a>
+					</div>
+				</div>
+				<img src="/static/images/cars/2061111101338.jpg" alt="Car" id="car">
+			</div>
+			
+			<!--div id="car_product_info">
+				<hr>
+				<div id="car_info">
+					
+					<img src="/static/images/check.gif" alt="check" id="check_or_gif">
+					<h3>My Car: <span id="car_name">My car name</span></h3>
+					<p id="boot_size">Boot Size:</p>
+					
+					<div id="car_diagram">
+						<div id="car_width_wrapper">
+							<div id="car_height_wrapper">
+								<div>
+									<img src="/static/images/car_diagram_wh.jpg" alt="car width and height" id="car_wh">
+									<span class="measurement" id="c_width">Width: </span>
+								</div>
+								<span id="c_height" class="measurement">Height:<br>123cm </span>
+							</div>
+						</div>
+
+						<div id="car_depth_wrapper">
+							<img src="/static/images/car_diagram_depth.jpg" alt="Car Depth" id="car_depth">
+							<div id="c_depth" class="t_center measurement">Depth: </div>
+						</div>
+					</div>
+					
+					<div id="button_container">
+						<a href="http://www.homebase.co.uk" id="click_and_collect" class="panel_btn">Click and collect</a>
+						<a href="javascript:void(0);" id="new_reg" data-id="" class="panel_btn">Enter new registration</a>
+						<a href="http://www.homebase.co.uk" id="add_to_trolley" data-id="" class="panel_btn">Add to trolley</a>
+					</div>
+				</div>
+				<img src="/static/images/cars/2061111101338.jpg" alt="Car" id="car">
+			</div-->
+			
+		</div>
+	</div>
+
+	
+	<!--PAGE STARTS-->
+	<div id="page_container_top" class="container"></div>
+	
+    <!--MAIN CONTENT AREA-->
+    <section id="page_container_middle" class="container">
+    	<div id="content_area">
+    			    		
+	    		<div id="left_col">
+		    		<div id="reserve_info">
+			    		<img src="/static/images/check_reserve_availability_icon.gif" alt="Check Reserve">
+			    		<p>Your products will be available for collection <strong>3 hours after <br>placing your reservation</strong> and held until the store closes on <br><strong>13th March</strong>.</p>
+		    		</div>
+		    		
+		    		<table id="items_to_reserve">
+		            <tr>
+		              <td class="details">
+		                  <img src="/static/images/sofa.jpg" alt="Product Name" class="product_item">
+		                  <p>
+		                      <span class="p_title">Qualcast Rotary Mower 1500w and Trimmer Set - 430w</span><br>
+		                      <span class="price">£100.00</span><br>
+		                      <span class="p_no">Product no. 005939</span><br>
+		                      <!--WILL THIS FIT IN MY CAR?!-->
+		                      <a href="javascript:void(0);" class="fit_in_car_btn" data-id="">Will this fit in my car?</a><br>
+		                      <a href="#" class="remove_product">remove this item</a>
+		                  </p>
+		              </td>
+		              <td class="quantity">
+		              	Quantity <br>Required
+						<form class="dropdown">
+		                     <select id="quantity_0" name="quantity_0">
+		                        <option selected="selected">1</option>
+		                        <option>2</option>
+		                        <option>3</option>
+		                        <option>4</option>
+		                        <option>5</option>
+		                        <option>6</option>
+		                        <option>7</option>
+		                        <option>8</option>
+		                        <option>9</option>
+		                        <option>10</option>
+		                     </select>
+		                 </form>
+		                 <a href="#" class="remove">Remove</a>
+		              </td>
+		              <td class="price_col">
+							<p>£399.99</p>
+		              </td>
+		          </table>
+	          </div>
+	          <!--FAKE RIGHT COL VISUAL HERE -->
+	          <div id="available_places"></div>
+        </div>
+    </section>
+    <div id="page_container_bottom" class="container"></div>
+        
+    <!--JS Essential Scripts-->
+	<script src="/static/js/plugins/jquery-1.9.1.min.js"></script>
+    <script src="/static/js/plugins/jquery-ui-2.js"></script>
+    <script src="/static/js/prototype.js?v={{build_version}}"></script>
+    <script src="/static/js/plugins/modernizr.custom.91587.js"></script>
+    
+    <!--[if lte IE 7]>
+    	<script src="/static/js/for_ie.js?v={{build_version}}"></script>
+    <![endif]-->
+</body>
+</html>
