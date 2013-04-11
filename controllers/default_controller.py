@@ -14,7 +14,7 @@ from google.appengine.api import urlfetch
 from google.appengine.api import mail
 from google.appengine.ext.webapp import blobstore_handlers
 from google.appengine.ext.webapp import template
-from google.appengine.runtime.apiproxy_errors import CapabilityDisabledError   
+from google.appengine.runtime.apiproxy_errors import CapabilityDisabledError
 from google.appengine.ext.db import BadValueError
 from google.appengine.ext import db
 from google.appengine.runtime import DeadlineExceededError
@@ -34,6 +34,21 @@ class WarmupHandler(webapp.RequestHandler):
 class DefaultHandler(utils.BaseHandler):
 	def get(self):
 		path = os.path.join(os.path.dirname(__file__),'../views/index.html')
+		self.response.out.write(template.render(path,self.context))
+
+class Product1(utils.BaseHandler):
+	def get(self):
+		path = os.path.join(os.path.dirname(__file__),'../views/product1.html')
+		self.response.out.write(template.render(path,self.context))
+
+class Product2(utils.BaseHandler):
+	def get(self):
+		path = os.path.join(os.path.dirname(__file__),'../views/product2.html')
+		self.response.out.write(template.render(path,self.context))
+
+class Product3(utils.BaseHandler):
+	def get(self):
+		path = os.path.join(os.path.dirname(__file__),'../views/product3.html')
 		self.response.out.write(template.render(path,self.context))
 
 class JSONNavigationHandler(utils.BaseHandler):

@@ -24,6 +24,9 @@ jsonRequestNavigation = '/json/navigation'
 
 # User Request Endpoint URL for HTML
 requestDefault = '/'
+requestProduct1 = '/product1'
+requestProduct2 = '/product2'
+requestProduct3 = '/product3'
 
 # Task URLs
 taskProductCollection = '/tasks/product-collection'
@@ -36,6 +39,9 @@ cronProductDetailCollection = '/cron/product-detail-collection'
 
 application = webapp.WSGIApplication([
 	(requestWarmUp, default_controller.WarmupHandler),
+	(requestProduct1, default_controller.Product1),
+	(requestProduct2, default_controller.Product2),
+	(requestProduct3, default_controller.Product3),
 	(cronProductCollection, cron.ProductCollection),
 	(cronProductDetailCollection, cron.ProductDetailCollection),
 	(taskProductCollection, tasks.ProductCollection),

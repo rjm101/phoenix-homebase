@@ -1,0 +1,196 @@
+	<!--OVERLAY PANELS-->
+	<div class="overlay"></div>
+	
+	<!--PANELS-->
+	<div class="panel">
+		<div id="panel_header">
+			<h2 id="panel_heading">Will it fit in my boot?</h2>
+			<a href="#" id="close"></a>
+		</div>
+		
+		<div id="loader"></div>
+		
+		<!--FILL IN YOUR CAR REGISTRATION-->
+		<div class="content_area" id="car_reg_form">
+		
+			<h3>Enter Car Registration</h3>
+			<!--ERROR-->
+			<div class="notification" id="error">
+				<img src="/static/images/alert.gif" alt="error"> 
+				<span id="error_message"></span>
+			</div>
+			
+			<!--CAR REG FORM -->
+			<form id="my_reg_form" onsubmit="return false">
+				<input type="text" id="car_reg" required>
+				<button type="submit" value="search">Search</button>
+			</form>
+			
+			<hr>
+			
+			<h3>Or Select Make and Model</h3>
+			<form id="select_make_model">
+				<div id="make_col">
+					<label>Select Make</label>
+	                <select id="car_make" name="">
+	                    <option selected="selected">Ford</option>
+	                    <option>Audi</option>
+	                    <option>BMW</option>
+	                    <option>Chrysler</option>
+	                    <option>Citroen</option>
+	                    <option>Dodge</option>
+	                    <option>Honda</option>
+	                    <option>Jaguar</option>
+	                    <option>Kia</option>
+	                    <option>Land Rover</option>
+	                    <option>Lexus</option>
+	                    <option>Morgan</option>
+	                    <option>Nissan</option>
+	                    <option>VW</option>
+	                    <option>Volvo</option>
+	                </select>
+				</div>
+				<div id="model_col">
+					<label>Select Car Model</label>
+					<select id="model" name="">
+						<option selected="selected">Ford Fiesta</option>
+					</select>
+				</div>
+            </form>
+		</div>
+		
+		<!--YOUR CAR DIMENSIONS-->
+		<div class="content_area" id="your_car">
+			
+			<!--YES HEADER-->
+			<div class="yes_no_wrapper" id="yes_label">
+				
+				<div class="label_header" id="yes_wrapper">
+					<div class="left_col">
+						<div class="pieContainer">
+							<div id="pie_center">
+								<p>Car Match<br><span id="match_percent"></span></p>
+							</div>
+							<canvas id="canvas" width="130" height="130">
+								<p id="no_canvas">Your browser does not support HTML5 Canvas.</p>
+							</canvas>
+						</div>
+					</div>
+					
+					<div class="right_col">
+						<p id="yes">
+							<img src="/static/images/tick.png" alt="tick" id="yes_tick" class="check_or_cross">
+							<span class="answer">Yes</span>
+						</p>
+						<div class="message_container" id="yes_message">The car data returned suggests this <br>product will fit</div>
+					</div>
+
+					<img src="/static/images/corner.png" alt="corner" class="corner">
+				</div>
+			</div>
+
+			<!--MAYBE HEADER-->
+			<div class="yes_no_wrapper" id="maybe_label">
+				
+				<div class="label_header" id="maybe_wrapper">
+					<div class="left_col">
+						<p id="maybe">
+							<img src="/static/images/maybe.png" alt="Maybe" class="check_or_cross">
+							<span class="answer" id="maybe_answer">Maybe</span>
+						</p>
+					</div>
+					
+					<div class="right_col">
+						<div id="maybe_message" class="message_container">The car data returned suggests this product may or may not fit due to tight dimensions.</div>
+					</div>
+
+					<img src="/static/images/corner_no.png" alt="corner" class="corner">
+				</div>
+			</div>
+
+			<!--NO HEADER -->
+			<div class="yes_no_wrapper" id="no_label">
+				
+				<div class="label_header" id="no_wrapper">
+					<div class="left_col">
+						<p id="no">
+							<img src="/static/images/cross.png" alt="tick" class="check_or_cross">
+							<span class="answer">No</span>
+						</p>
+					</div>
+					
+					<div class="right_col">
+						<div class="message_container" id="no_message">The car data returned suggests this product will not fit. Why not <a href="#" id="book_for_delivery">book for home delivery</a> instead?</div>
+					</div>
+
+					<img src="/static/images/corner_no.png" alt="corner" class="corner">
+				</div>
+			</div>
+
+			<div id="table_header">Compare your car boot and product size</div>
+
+			<ul id="item_list">
+				<li>
+					<div class="thumb_wrapper">
+						<img src="/static/images/products/" alt="product name" id="panel_product" class="product">
+					</div>
+					<h3 class="product_title">Product Item Name</h3>
+
+					<table class="size_table" id="product_size">
+						<caption>Packaged Size (cm)</caption>
+						<colgroup>
+						    <col span="1">
+							<col class="col">
+						</colgroup>
+						<tr>
+							<td>Length:</td>
+							<td id="p_length"></td>
+						</tr>
+						<tr class="to">
+							<td>Width:</td>
+							<td id="p_width"></td>
+						</tr>
+						<tr>
+							<td>Height:</td>
+							<td id="p_height"></td>
+						</tr>
+					</table>
+				</li>
+				
+				<li>
+					<div class="thumb_wrapper">
+						<img src="/static/images/cars/2061111101338.jpg" alt="" id="car">
+					</div>
+					<div id="car_info">
+						<h3>My Car: <br><span id="car_name">My car name</span></h3>
+					</div>
+
+					<table class="size_table" id="car_boot_size">
+						<caption>Boot Size (cm)</caption>
+						<colgroup>
+						    <col span="1">
+						    <col class="col">
+					 	</colgroup>
+						<tr>
+							<td>Opening width:</td>
+							<td id="ow"></td></tr>
+						<tr class="to">
+							<td>Opening height:</td>
+							<td id="oh"></td></tr>
+						<tr>
+							<td>Depth:</td>
+							<td id="d"></td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+
+			<div id="button_container">
+				<a href="http://www.homebase.co.uk" id="click_and_collect" class="panel_btn">Click and collect</a>
+				<a href="http://www.homebase.co.uk" id="add_to_trolley" class="panel_btn">Add to trolley</a>
+				<a href="javascript:void(0);" id="new_reg" class="panel_btn">Start again</a>
+			</div>
+			
+			<div id="related_cars_wrapper">Not your car? <a href="#" id="related_matches">List related matches</a></div>
+		</div>
+	</div>

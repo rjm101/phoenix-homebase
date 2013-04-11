@@ -1,6 +1,6 @@
 # DEV Config
 application: phoenix-homebase
-version: 0-0-3
+version: 0-0-7
 runtime: python
 api_version: 1
 

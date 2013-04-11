@@ -1,9 +1,22 @@
 @charset "UTF-8";
 /* CSS Document */
+html{
+	min-height:100%;
+	position:relative;
+}
 
-html, body{
-	width: 100%;
-	height: 100%;	
+body{height:100%; }
+
+#loader{
+	width: 64px;
+	height: 64px;
+	margin-left: -32px;
+	margin-top:85px;
+	background-image: url(../images/ajax-loader2.gif);
+	background-repeat: no-repeat;
+	position: relative;
+	left: 50%;
+	display: none;
 }
 
 body{font-family: Arial, Helvetica, sans-serif;}
@@ -24,7 +37,6 @@ a{text-decoration: none;}
 #page_container_top{
 	height: 203px;	
 	background-image: url(../images/Homebase_header.png);
-	/*border: 1px solid blue;*/
 }
 
 #page_container_middle{
@@ -36,13 +48,11 @@ a{text-decoration: none;}
 #page_container_bottom{
 	background-image: url(../images/Homebase_footer.png);
 	height: 720px;
-	/*border: 1px solid green;*/
 }
 
 .container{
 	width: 100%;
 	background-repeat: no-repeat;
-	min-width: 1024px;
 	background-position: center top;
 	margin: auto;
 	float: left;
@@ -57,9 +67,9 @@ a{text-decoration: none;}
 	display: none;
 }
 
-table{width: 100%;}
+#items_to_reserve{width: 100%;}
 
-table tr td{
+#items_to_reserve tr td{
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 10px;
 	border-bottom: 1px solid #E2E0DD;
@@ -69,17 +79,17 @@ table tr td{
 	border: 1px solid #E2E0DD;
 }
 
-table .details{
+#items_to_reserve .details{
 	color: #4D3D3E;
     font-size: 12px;
     font-weight: bold;
 }
 
-table tr .details{width: 32.1%;}
-table tr .quantity{width: 9.3%;}
-table tr .price_col{width: 8%;}
-table tr .place{width: 16.63%;}		
-table tr .selected_col{width: 16.1%;}	
+#items_to_reserve tr .details{width: 32.1%;}
+#items_to_reserve tr .quantity{width: 9.3%;}
+#items_to_reserve tr .price_col{width: 8%;}
+#items_to_reserve tr .place{width: 16.63%;}		
+#items_to_reserve tr .selected_col{width: 16.1%;}	
 
 .price_col p{text-align: center;}
 
@@ -137,6 +147,13 @@ table tr .selected_col{width: 16.1%;}
 	border-right: 2px solid #01A001;
 }
 
+.product_item{
+	width: 110px;
+	height: 110px;
+	float: left;
+	margin-right:10px;
+}
+
 .fit_in_car_btn{
 	width: 131px;
 	height: 10px;
@@ -145,7 +162,6 @@ table tr .selected_col{width: 16.1%;}
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #00a000;
 	color: white;
 	background-color: #00a000;
 	background-image: url(../images/fit_btn.gif);
@@ -184,9 +200,9 @@ table {
 	float: left;
 }
 
-table tr .details{width: 280px;}
-table tr .quantity{width: auto;}
-table tr .price_col{width: auto;}
+#items_to_reserve tr .details{width: 280px;}
+#items_to_reserve tr .quantity{width: auto;}
+#items_to_reserve tr .price_col{width: auto;}
 
 #reserve_info{margin-top: 32px;}
 
@@ -195,7 +211,9 @@ h2{
 	color: white;
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
-	margin: 12px;
+	margin: 17px 0 0 25px;
+	font-size: 18px;
+	text-shadow: 0 1px 2px #006D00;
 }
 
 h3, #select_make_model label{
@@ -203,4 +221,11 @@ h3, #select_make_model label{
 	color: #00a000;
 	margin-top: 10px;
 	display: block;
+}
+
+#select_make_model div label{
+	color: #7C7C7C;
+    font-size: 14px;
+    margin-top:15px;
+    margin-bottom:10px;
 }
